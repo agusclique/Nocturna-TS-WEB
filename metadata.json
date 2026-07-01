@@ -1,0 +1,6 @@
+{
+  "name": "Nocturna Tattoo Studio",
+  "description": "Estudio de tatuaje de lujo con Simulador de Tatuajes Interactivo y catálogo exclusivo de artistas y flashes.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
