@@ -54,7 +54,7 @@ export default function Navbar({ activeSection, setActiveSection }: NavbarProps)
           className="flex items-center gap-3 group focus:outline-none"
         >
           <img 
-            src="/src/assets/images/nocturna_moon_logo.svg" 
+            src="/assets/images/nocturna_moon_logo.svg" 
             alt="Nocturna Moon Logo" 
             className="w-8 h-8 object-contain transition-transform duration-500 group-hover:scale-110"
             referrerPolicy="no-referrer"

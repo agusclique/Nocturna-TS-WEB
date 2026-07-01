@@ -22,7 +22,7 @@ import BookingFlow from './components/BookingFlow';
 import Contact from './components/Contact';
 
 // Static Assets Paths
-const HERO_BG_IMAGE = '/src/assets/images/nocturna_studio_hero_1782919824687.jpg';
+const HERO_BG_IMAGE = '/assets/images/nocturna_studio_hero_1782919824687.jpg';
 
 export default function App() {
   const [activeSection, setActiveSection] = useState<string>('home');
@@ -68,7 +68,7 @@ export default function App() {
           {/* Glowing loader halo */}
           <div className="absolute w-24 h-24 rounded-full border border-red-950/40 border-t-red-500 animate-spin" />
           <img 
-            src="/src/assets/images/nocturna_moon_logo.svg" 
+            src="/assets/images/nocturna_moon_logo.svg" 
             alt="Nocturna Moon Logo" 
             className="w-12 h-12 object-contain animate-pulse relative z-10"
             referrerPolicy="no-referrer"

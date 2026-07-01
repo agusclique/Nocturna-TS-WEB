@@ -10,7 +10,7 @@ export const ARTISTS: Artist[] = [
     id: 'art-1',
     name: 'Valeria Vega',
     role: 'Fundadora & Artista Principal',
-    portrait: '/src/assets/images/valeria_artist_1782919840521.jpg', // Our generated asset!
+    portrait: '/assets/images/valeria_artist_1782919840521.jpg', // Our generated asset!
     bio: 'Con más de una década de experiencia internacional, Valeria ha desarrollado un estilo inconfundible que fusiona el misticismo gótico, el grabado medieval y el blackwork de alto contraste. Su enfoque se centra en crear piezas fluidas que interactúan dinámicamente con la musculatura del cuerpo.',
     specialties: ['Blackwork', 'Dark Art', 'Grabado Medieval', 'Horror'],
     instagram: '@valeria.nocturna',
@@ -56,32 +56,32 @@ export const BODY_TEMPLATES: BodyTemplate[] = [
   {
     id: 'temp-arm',
     name: 'Brazo (Arm)',
-    imageUrl: '/src/assets/images/template_arm_1782923307238.jpg'
+    imageUrl: '/assets/images/template_arm_1782923307238.jpg'
   },
   {
     id: 'temp-forearm',
     name: 'Antebrazo (Forearm)',
-    imageUrl: '/src/assets/images/template_forearm_1782923322523.jpg'
+    imageUrl: '/assets/images/template_forearm_1782923322523.jpg'
   },
   {
     id: 'temp-hand',
     name: 'Mano (Hand)',
-    imageUrl: '/src/assets/images/template_hand_1782923341814.jpg'
+    imageUrl: '/assets/images/template_hand_1782923341814.jpg'
   },
   {
     id: 'temp-leg',
     name: 'Pierna (Leg)',
-    imageUrl: '/src/assets/images/template_leg_1782923356150.jpg'
+    imageUrl: '/assets/images/template_leg_1782923356150.jpg'
   },
   {
     id: 'temp-chest',
     name: 'Pecho (Chest)',
-    imageUrl: '/src/assets/images/template_chest_1782923434228.jpg'
+    imageUrl: '/assets/images/template_chest_1782923434228.jpg'
   },
   {
     id: 'temp-back',
     name: 'Espalda (Back)',
-    imageUrl: '/src/assets/images/template_back_1782923465217.jpg'
+    imageUrl: '/assets/images/template_back_1782923465217.jpg'
   }
 ];
 
@@ -89,7 +89,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
   {
     id: 'port-1',
     title: 'La Consagración del Caos',
-    imageUrl: '/src/assets/images/portfolio_bat_1782922738242.jpg',
+    imageUrl: '/assets/images/portfolio_bat_1782922738242.jpg',
     artistId: 'art-1',
     bodyPart: 'Espalda',
     style: 'Blackwork',
@@ -98,13 +98,13 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     colorType: 'Black & Grey',
     description: 'Pieza de espalda completa inspirada en grabados góticos alemanes del siglo XV. Representa figuras místicas entrelazadas por patrones orgánicos.',
     healingPhotos: [
-      '/src/assets/images/portfolio_bat_1782922738242.jpg'
+      '/assets/images/portfolio_bat_1782922738242.jpg'
     ]
   },
   {
     id: 'port-2',
     title: 'Ecuación Sagrada',
-    imageUrl: '/src/assets/images/portfolio_ghost_1782922754442.jpg',
+    imageUrl: '/assets/images/portfolio_ghost_1782922754442.jpg',
     artistId: 'art-2',
     bodyPart: 'Brazo',
     style: 'Geometric',
@@ -113,13 +113,13 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     colorType: 'Black & Grey',
     description: 'Mandala simétrico ultra-detallado con micropuntillismo degradado y líneas concéntricas de 0.15mm.',
     healingPhotos: [
-      '/src/assets/images/portfolio_ghost_1782922754442.jpg'
+      '/assets/images/portfolio_ghost_1782922754442.jpg'
     ]
   },
   {
     id: 'port-3',
     title: 'Despertar de la Ciber-Geisha',
-    imageUrl: '/src/assets/images/portfolio_seraphim_1782922764899.jpg',
+    imageUrl: '/assets/images/portfolio_seraphim_1782922764899.jpg',
     artistId: 'art-3',
     bodyPart: 'Brazo',
     style: 'Anime',
@@ -128,13 +128,13 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     colorType: 'Black & Grey',
     description: 'Diseño neo-manga fusionado con elementos mecánicos cibernéticos y alto contraste en fondos sólidos.',
     healingPhotos: [
-      '/src/assets/images/portfolio_seraphim_1782922764899.jpg'
+      '/assets/images/portfolio_seraphim_1782922764899.jpg'
     ]
   },
   {
     id: 'port-4',
     title: 'El Duelo Inmortal',
-    imageUrl: '/src/assets/images/portfolio_palms_1782922776487.jpg',
+    imageUrl: '/assets/images/portfolio_palms_1782922776487.jpg',
     artistId: 'art-4',
     bodyPart: 'Pecho',
     style: 'Traditional',
@@ -143,13 +143,13 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     colorType: 'Color',
     description: 'Composición clásica americana de águila y serpiente con paleta reducida a negro saturado, rojo sangre y amarillo mostaza.',
     healingPhotos: [
-      '/src/assets/images/portfolio_palms_1782922776487.jpg'
+      '/assets/images/portfolio_palms_1782922776487.jpg'
     ]
   },
   {
     id: 'port-5',
     title: 'Ojo del Abismo Celestial',
-    imageUrl: '/src/assets/images/portfolio_thumbs_1782922785223.jpg',
+    imageUrl: '/assets/images/portfolio_thumbs_1782922785223.jpg',
     artistId: 'art-1',
     bodyPart: 'Mano',
     style: 'Dark Art',
@@ -158,13 +158,13 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     colorType: 'Black & Grey',
     description: 'Ojo esotérico hiperdetallado en el dorso de la mano con lágrimas geométricas que descienden hacia las falanges.',
     healingPhotos: [
-      '/src/assets/images/portfolio_thumbs_1782922785223.jpg'
+      '/assets/images/portfolio_thumbs_1782922785223.jpg'
     ]
   },
   {
     id: 'port-6',
     title: 'Lágrimas del Zodiaco',
-    imageUrl: '/src/assets/images/portfolio_eyes_1782922794305.jpg',
+    imageUrl: '/assets/images/portfolio_eyes_1782922794305.jpg',
     artistId: 'art-2',
     bodyPart: 'Cuello',
     style: 'Fineline',
@@ -173,7 +173,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     colorType: 'Black & Grey',
     description: 'Constelaciones astronómicas y órbitas celestes dibujadas con elegancia suprema bajo la base del lóbulo.',
     healingPhotos: [
-      '/src/assets/images/portfolio_eyes_1782922794305.jpg'
+      '/assets/images/portfolio_eyes_1782922794305.jpg'
     ]
   }
 ];
@@ -188,7 +188,7 @@ export const FLASH_ITEMS: FlashItem[] = [
     availability: 'disponible',
     isLimited: true,
     svgPath: '',
-    imageUrl: '/src/assets/images/flash_rabbits_circle_1782924506874.jpg'
+    imageUrl: '/assets/images/flash_rabbits_circle_1782924506874.jpg'
   },
   {
     id: 'fls-2',
@@ -199,7 +199,7 @@ export const FLASH_ITEMS: FlashItem[] = [
     availability: 'reservado',
     isLimited: false,
     svgPath: '',
-    imageUrl: '/src/assets/images/flash_bunny_heart_1782924523290.jpg'
+    imageUrl: '/assets/images/flash_bunny_heart_1782924523290.jpg'
   },
   {
     id: 'fls-3',
@@ -210,7 +210,7 @@ export const FLASH_ITEMS: FlashItem[] = [
     availability: 'vendido',
     isLimited: true,
     svgPath: '',
-    imageUrl: '/src/assets/images/flash_gothic_sigil_1782924536837.jpg'
+    imageUrl: '/assets/images/flash_gothic_sigil_1782924536837.jpg'
   },
   {
     id: 'fls-4',
@@ -221,6 +221,6 @@ export const FLASH_ITEMS: FlashItem[] = [
     availability: 'disponible',
     isLimited: false,
     svgPath: '',
-    imageUrl: '/src/assets/images/flash_argentina_stamp_1782924552442.jpg'
+    imageUrl: '/assets/images/flash_argentina_stamp_1782924552442.jpg'
   }
 ];

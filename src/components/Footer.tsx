@@ -22,7 +22,7 @@ export default function Footer({ setActiveSection }: FooterProps) {
         <div className="space-y-6">
           <div className="flex items-center gap-3">
             <img 
-              src="/src/assets/images/nocturna_moon_logo.svg" 
+              src="/assets/images/nocturna_moon_logo.svg" 
               alt="Nocturna Moon Logo" 
               className="w-7 h-7 object-contain"
               referrerPolicy="no-referrer"
