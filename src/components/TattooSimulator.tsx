@@ -19,7 +19,7 @@ export default function TattooSimulator() {
   const [selectedId, setSelectedId] = useState<string | null>(null);
   
   // Canvas Background State
-  const [backgroundUrl, setBackgroundUrl] = useState<string>(BODY_TEMPLATES[0].imageUrl);
+  const [backgroundUrl, setBackgroundUrl] = useState<string>('/assets/images/regenerated_image_1784063091445.webp');
   const [uploadedImage, setUploadedImage] = useState<string | null>(null);
   
   // UI Tabs & Controls State
@@ -35,8 +35,6 @@ export default function TattooSimulator() {
   
   // Dragging & Transforming Refs/States
   const canvasRef = useRef<HTMLDivElement>(null);
-  const [isDraggingCanvas, setIsDraggingCanvas] = useState(false);
-  const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
   const [transforming, setTransforming] = useState<'drag' | 'resize' | 'rotate' | null>(null);
   const [initialTransformState, setInitialTransformState] = useState<{
     x: number;
@@ -289,7 +287,8 @@ export default function TattooSimulator() {
 
   // Dragging & Resizing Math Handlers
   const handleCanvasMouseDown = (e: MouseEvent<HTMLDivElement>) => {
-    if (e.target === canvasRef.current || (e.target as HTMLElement).classList.contains('bg-checkerboard')) {
+    const isCanvasBg = e.target === canvasRef.current || (e.target as HTMLElement).classList.contains('bg-checkerboard') || (e.target as HTMLElement).tagName === 'IMG';
+    if (isCanvasBg) {
       setSelectedId(null);
     }
   };
@@ -448,7 +447,7 @@ export default function TattooSimulator() {
   };
 
   const handleTouchMoveCanvas = (e: TouchEvent<HTMLDivElement>) => {
-    if (e.touches.length === 2 && selectedId && initialTransformState && transforming) {
+    if (e.touches.length === 2 && initialTransformState && selectedId) {
       e.preventDefault();
       const p1 = e.touches[0];
       const p2 = e.touches[1];
@@ -507,15 +506,15 @@ export default function TattooSimulator() {
       const ctx = canvasElement.getContext('2d');
       if (!ctx) return;
 
-      // Draw background
-      ctx.drawImage(bgImg, 0, 0, canvasElement.width, canvasElement.height);
-
       // Determine ratio between container visual size and natural background image size
       const containerWidth = canvasRef.current?.clientWidth || 500;
       const containerHeight = canvasRef.current?.clientHeight || 500;
       
       const scaleXRatio = canvasElement.width / containerWidth;
       const scaleYRatio = canvasElement.height / containerHeight;
+
+      // Draw background stably at full size
+      ctx.drawImage(bgImg, 0, 0, canvasElement.width, canvasElement.height);
 
       // Sort elements by zIndex and draw them
       const sortedElements = [...elements].sort((a, b) => a.zIndex - b.zIndex);
@@ -831,6 +830,83 @@ export default function TattooSimulator() {
                     className="w-full h-1 bg-zinc-950 rounded-lg appearance-none cursor-pointer accent-red-600"
                   />
                 </div>
+
+                {/* Rotación de Pieza */}
+                <div>
+                  <div className="flex justify-between text-xs tracking-wide text-zinc-400 mb-1">
+                    <span>Rotación de Pieza</span>
+                    <span>{activeElement.rotation}°</span>
+                  </div>
+                  <input
+                    type="range"
+                    min="0"
+                    max="360"
+                    step="1"
+                    value={activeElement.rotation}
+                    onChange={(e) => updateElementProperty(activeElement.id, 'rotation', parseInt(e.target.value))}
+                    className="w-full h-1 bg-zinc-950 rounded-lg appearance-none cursor-pointer accent-red-600"
+                  />
+                </div>
+
+                {/* Tamaño / Escala de Pieza */}
+                <div>
+                  <div className="flex justify-between text-xs tracking-wide text-zinc-400 mb-1">
+                    <span>Tamaño de Pieza</span>
+                    <span>{activeElement.scaleX.toFixed(2)}x</span>
+                  </div>
+                  <input
+                    type="range"
+                    min="0.1"
+                    max="5.0"
+                    step="0.05"
+                    value={activeElement.scaleX}
+                    onChange={(e) => {
+                      const val = parseFloat(e.target.value);
+                      updateElementProperty(activeElement.id, 'scaleX', val);
+                      updateElementProperty(activeElement.id, 'scaleY', val);
+                    }}
+                    className="w-full h-1 bg-zinc-950 rounded-lg appearance-none cursor-pointer accent-red-600"
+                  />
+                </div>
+
+                {/* Posición Manual de Pieza */}
+                <div>
+                  <span className="text-zinc-400 text-xs tracking-wider uppercase block mb-1">
+                    Posición Manual de Pieza:
+                  </span>
+                  <div className="grid grid-cols-2 gap-3">
+                    <div>
+                      <div className="flex justify-between text-[10px] text-zinc-500 mb-0.5">
+                        <span>Horiz. (X)</span>
+                        <span>{Math.round(activeElement.x)}px</span>
+                      </div>
+                      <input
+                        type="range"
+                        min="-150"
+                        max={canvasRef.current ? canvasRef.current.clientWidth : 500}
+                        step="1"
+                        value={activeElement.x}
+                        onChange={(e) => updateElementProperty(activeElement.id, 'x', parseInt(e.target.value))}
+                        className="w-full h-1 bg-zinc-950 rounded-lg appearance-none cursor-pointer accent-red-600"
+                      />
+                    </div>
+                    <div>
+                      <div className="flex justify-between text-[10px] text-zinc-500 mb-0.5">
+                        <span>Vert. (Y)</span>
+                        <span>{Math.round(activeElement.y)}px</span>
+                      </div>
+                      <input
+                        type="range"
+                        min="-150"
+                        max={canvasRef.current ? canvasRef.current.clientHeight : 500}
+                        step="1"
+                        value={activeElement.y}
+                        onChange={(e) => updateElementProperty(activeElement.id, 'y', parseInt(e.target.value))}
+                        className="w-full h-1 bg-zinc-950 rounded-lg appearance-none cursor-pointer accent-red-600"
+                      />
+                    </div>
+                  </div>
+                </div>
               </div>
 
               {/* Manipulation quick-actions */}
@@ -944,7 +1020,7 @@ export default function TattooSimulator() {
             <img 
               src={backgroundUrl} 
               alt="Lienzo corporal" 
-              className="absolute w-full h-full object-cover pointer-events-none"
+              className="absolute w-full h-full object-cover pointer-events-none origin-center"
               referrerPolicy="no-referrer"
             />
 
@@ -957,7 +1033,7 @@ export default function TattooSimulator() {
                 filter: `blur(${elem.blur}px) contrast(${elem.contrast}%) brightness(${elem.brightness}%)`,
                 opacity: elem.opacity,
                 mixBlendMode: elem.blendMode as any,
-                transform: `rotate(${elem.rotation}deg) scaleX(${elem.isFlipped ? -1 : 1}) scaleY(${elem.isFlippedVertically ? -1 : 1})`,
+                transform: `scaleX(${elem.isFlipped ? -1 : 1}) scaleY(${elem.isFlippedVertically ? -1 : 1})`,
                 color: elem.color
               };
 
@@ -974,7 +1050,7 @@ export default function TattooSimulator() {
                     top: `${elem.y}px`,
                     width: '150px',
                     height: '150px',
-                    transform: `scale(${elem.scaleX}, ${elem.scaleY})`,
+                    transform: `rotate(${elem.rotation}deg) scale(${elem.scaleX}, ${elem.scaleY})`,
                     zIndex: elem.zIndex
                   }}
                 >

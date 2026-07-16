@@ -56,32 +56,32 @@ export const BODY_TEMPLATES: BodyTemplate[] = [
   {
     id: 'temp-arm',
     name: 'Brazo (Arm)',
-    imageUrl: '/assets/images/template_arm_1782923307238.jpg'
+    imageUrl: '/assets/images/regenerated_image_1784063091445.webp'
   },
   {
     id: 'temp-forearm',
     name: 'Antebrazo (Forearm)',
-    imageUrl: '/assets/images/template_forearm_1782923322523.jpg'
+    imageUrl: '/assets/images/regenerated_image_1784063089242.webp'
   },
   {
     id: 'temp-hand',
     name: 'Mano (Hand)',
-    imageUrl: '/assets/images/template_hand_1782923341814.jpg'
+    imageUrl: '/assets/images/regenerated_image_1784063089894.webp'
   },
   {
     id: 'temp-leg',
     name: 'Pierna (Leg)',
-    imageUrl: '/assets/images/template_leg_1782923356150.jpg'
+    imageUrl: '/assets/images/regenerated_image_1784063090737.webp'
   },
   {
     id: 'temp-chest',
     name: 'Pecho (Chest)',
-    imageUrl: '/assets/images/template_chest_1782923434228.jpg'
+    imageUrl: '/assets/images/regenerated_image_1784063092000.webp'
   },
   {
     id: 'temp-back',
     name: 'Espalda (Back)',
-    imageUrl: '/assets/images/template_back_1782923465217.jpg'
+    imageUrl: '/assets/images/regenerated_image_1784063092632.webp'
   }
 ];
 
