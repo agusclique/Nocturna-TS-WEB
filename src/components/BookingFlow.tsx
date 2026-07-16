@@ -406,7 +406,7 @@ export default function BookingFlow({
                 <input
                   type="tel"
                   required
-                  placeholder="+34 600 000 000"
+                  placeholder="+54 011 27872898"
                   value={clientPhone}
                   onChange={(e) => setClientPhone(e.target.value)}
                   className="w-full bg-zinc-950 border border-zinc-800 text-zinc-300 p-2.5 text-xs focus:outline-none focus:border-red-950 font-mono"

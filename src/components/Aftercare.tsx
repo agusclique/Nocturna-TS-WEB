@@ -121,7 +121,7 @@ export default function Aftercare() {
             <p className="text-xs uppercase tracking-widest text-zinc-100 font-bold">¿Tienes dudas o hinchazón inusual?</p>
             <p className="text-xs text-zinc-500 leading-relaxed font-sans">Es habitual que la zona esté inflamada y enrojecida las primeras 48 horas. Si notas secreciones raras o calor extremo, comunícate inmediatamente.</p>
             <a 
-              href="https://wa.me/34600000000" 
+              href="https://wa.me/5491127872898" 
               target="_blank" 
               rel="noopener noreferrer"
               className="inline-block bg-zinc-950 border border-zinc-800 hover:border-red-900 text-zinc-300 hover:text-zinc-100 px-4 py-2.5 text-[10px] tracking-widest uppercase font-semibold transition"

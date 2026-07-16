@@ -60,7 +60,7 @@ export default function Contact() {
                 <Phone className="w-5 h-5 text-red-500 shrink-0 mt-0.5" />
                 <div>
                   <span className="font-semibold block text-zinc-200">WhatsApp Oficial</span>
-                  <span className="text-zinc-400">+34 600 000 000</span>
+                  <span className="text-zinc-400">+54 011 27872898</span>
                 </div>
               </div>
 
@@ -104,7 +104,7 @@ export default function Contact() {
             {/* Direct Whatsapp chat CTA */}
             <div className="pt-2">
               <a 
-                href="https://wa.me/34600000000" 
+                href="https://wa.me/5491127872898" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-full flex items-center justify-center gap-2 bg-red-950/20 hover:bg-red-950/40 border border-red-900/30 hover:border-red-900/60 text-red-400 py-3.5 text-xs tracking-widest uppercase font-bold transition"
