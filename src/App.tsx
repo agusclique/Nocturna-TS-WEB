@@ -6,7 +6,7 @@
 import { useState, useEffect } from 'react';
 import { 
   Calendar, Sparkles, Shield, Compass, Feather, ArrowUpRight, 
-  ChevronRight, ArrowRight, MessageSquare, Instagram, Heart
+  ChevronRight, ArrowRight, MessageSquare, Instagram, Heart, MessageCircle
 } from 'lucide-react';
 
 // Custom Components
@@ -328,24 +328,41 @@ export default function App() {
       {/* Persistent Footer */}
       <Footer setActiveSection={setActiveSection} />
 
-      {/* FLOATING ACTION BOOKING CORNER BUTTON (Nice extra!) */}
-      {activeSection !== 'booking' && (
-        <button
-          onClick={() => {
-            setPreselectedArtistId(null);
-            setPreselectedFlash(null);
-            setActiveSection('booking');
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-          }}
-          className="fixed bottom-6 right-6 z-30 bg-red-600 hover:bg-red-700 border border-red-500/30 text-zinc-100 p-4 rounded-none shadow-2xl flex items-center justify-center gap-2 group transition duration-300 animate-bounce-slow hover:-translate-y-1 cursor-pointer"
-          title="Agendar Cita Directa"
+      {/* FLOATING ACTIONS AT THE BOTTOM LEFT */}
+      <div className="fixed bottom-6 left-6 z-30 flex items-center gap-3">
+        {/* WhatsApp Button (Present in every tab) */}
+        <a
+          href="https://wa.me/34600000000"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-emerald-600 hover:bg-emerald-500 border border-emerald-500/30 text-white p-4 rounded-none shadow-2xl flex items-center justify-center gap-2 group transition duration-300 hover:-translate-y-1 cursor-pointer"
+          title="Chatear por WhatsApp"
         >
-          <Calendar className="w-5 h-5" />
+          <MessageCircle className="w-5 h-5 text-white" />
           <span className="text-xs tracking-widest font-bold uppercase max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-500 ease-out whitespace-nowrap">
-            Agendar Cita
+            WhatsApp
           </span>
-        </button>
-      )}
+        </a>
+
+        {/* Booking Button (Present except in booking tab) */}
+        {activeSection !== 'booking' && (
+          <button
+            onClick={() => {
+              setPreselectedArtistId(null);
+              setPreselectedFlash(null);
+              setActiveSection('booking');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+            className="bg-red-600 hover:bg-red-700 border border-red-500/30 text-zinc-100 p-4 rounded-none shadow-2xl flex items-center justify-center gap-2 group transition duration-300 hover:-translate-y-1 cursor-pointer"
+            title="Agendar Cita Directa"
+          >
+            <Calendar className="w-5 h-5" />
+            <span className="text-xs tracking-widest font-bold uppercase max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-500 ease-out whitespace-nowrap">
+              Agendar Cita
+            </span>
+          </button>
+        )}
+      </div>
     </div>
   );
 }
