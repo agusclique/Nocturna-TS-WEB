@@ -56,7 +56,7 @@ export const BODY_TEMPLATES: BodyTemplate[] = [
   {
     id: 'temp-arm',
     name: 'Brazo (Arm)',
-    imageUrl: '/assets/images/regenerated_image_1784063091445.webp'
+    imageUrl: '/assets/images/regenerated_image_1784164849299.png'
   },
   {
     id: 'temp-forearm',
