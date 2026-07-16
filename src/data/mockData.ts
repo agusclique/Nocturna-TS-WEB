@@ -56,32 +56,32 @@ export const BODY_TEMPLATES: BodyTemplate[] = [
   {
     id: 'temp-arm',
     name: 'Brazo (Arm)',
-    imageUrl: '/assets/images/regenerated_image_1784164849299.png'
+    imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCfCVbsSc51dc0Lf5rZoqrEW00ut0N1kBY2SeS54X9MiYatp0xh55qX6A&s=10'
   },
   {
     id: 'temp-forearm',
     name: 'Antebrazo (Forearm)',
-    imageUrl: '/assets/images/regenerated_image_1784063089242.webp'
+    imageUrl: 'https://img.magnific.com/foto-gratis/mano-sensible-haciendo-expresiones-delicadas_23-2149524497.jpg?semt=ais_hybrid&w=740&q=80'
   },
   {
     id: 'temp-hand',
     name: 'Mano (Hand)',
-    imageUrl: '/assets/images/regenerated_image_1784063089894.webp'
+    imageUrl: 'https://plus.unsplash.com/premium_photo-1666107278223-780557577da0?q=80&w=715&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
   },
   {
     id: 'temp-leg',
     name: 'Pierna (Leg)',
-    imageUrl: '/assets/images/regenerated_image_1784063090737.webp'
+    imageUrl: 'https://static.vecteezy.com/system/resources/previews/003/512/604/large_2x/women-s-leg-bent-at-the-knee-free-photo.jpg'
   },
   {
     id: 'temp-chest',
     name: 'Pecho (Chest)',
-    imageUrl: '/assets/images/regenerated_image_1784063092000.webp'
+    imageUrl: 'https://elosklinik.com/wp-content/uploads/2025/03/goguste-sivilce.webp'
   },
   {
     id: 'temp-back',
     name: 'Espalda (Back)',
-    imageUrl: '/assets/images/regenerated_image_1784063092632.webp'
+    imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqUaJumyKdUcp6HO67RYjyS98wqmI67zKjjfesjzyXXMSQu6EFRfzwIg&s=10'
   }
 ];
 

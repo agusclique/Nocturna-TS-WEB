@@ -19,7 +19,7 @@ export default function TattooSimulator() {
   const [selectedId, setSelectedId] = useState<string | null>(null);
   
   // Canvas Background State
-  const [backgroundUrl, setBackgroundUrl] = useState<string>('/assets/images/regenerated_image_1784164849299.png');
+  const [backgroundUrl, setBackgroundUrl] = useState<string>('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCfCVbsSc51dc0Lf5rZoqrEW00ut0N1kBY2SeS54X9MiYatp0xh55qX6A&s=10');
   const [uploadedImage, setUploadedImage] = useState<string | null>(null);
   
   // UI Tabs & Controls State
